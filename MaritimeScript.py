@@ -1,0 +1,12 @@
+import os
+os.system(f"""gdown 'https://drive.google.com/uc?id=13wKWzHqkDQHMHjfuUWjgzwhTrnMoEE8P&export=download'""")
+os.system(f"""gdown 'https://drive.google.com/uc?id=0B43_rYxEgelVb2VFaXB4cE56RW8&export=download'""")
+os.system(f"""gdown 'https://drive.google.com/uc?id=1HnHyQzhzzDlYh15y9_K1mNZX3grlSDMM&export=download'""")
+os.system(f"""mkdir VIS_onboard""")
+os.system(f"""unzip -q 'VIS_Onboard.zip'""") 
+os.system(f"""mkdir VIS_onshore""")
+os.system(f"""unrar e 'VIS_Onshore.rar' -d VIS_onshore""")
+os.system(f"""mkdir NIR""")
+os.system(f"""unrar e 'NIR.rar' -d NIR""")
+os.system(f"""rm -r *.rar""")
+os.system(f"""rm -r *.zip""")
