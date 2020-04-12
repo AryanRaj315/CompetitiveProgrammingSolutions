@@ -16,7 +16,7 @@ int BS(int low, int high, ll x[], ll q){
         BS(low, mid, x, q);
     else if(x[mid] > q)
         BS(mid, high, x, q);
-}
+}asdfghjkhgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
 int main(){
     // INPUT BLOCK
     int n, q, c;
