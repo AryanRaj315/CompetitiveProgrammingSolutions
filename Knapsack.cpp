@@ -4,30 +4,29 @@
 #include<vector>
 using namespace std;
 //  n, k;
-#define loop(i, start, end) for(int i = start; i < end; i++)
+#define loop(i, start, end) for(int i = start; i <= end; i++)
 #define ll long long int
 #define pb push_back
-vector<ll> weight, value;
-ll n, w;
-// int dp[100000][4] = {0};
-// int recurr(){
-
-// }
-
+// vector<ll> weight, value;
+// ll n, w;
 int main(){
-	int n;
-	cin>>n;
-	int a[n],b[n],c[n];
-	for(int i=0;i<n;i++)
-	cin>>a[i]>>b[i]>>c[i];
-	int dp[n+1][3]={0};
-	for(int i=0;i<n;i++)
-	{
-		dp[i+1][0]=a[i]+max(dp[i][1], dp[i][2]);
-		dp[i+1][1]=b[i]+max(dp[i][0], dp[i][2]);
-        dp[i+1][2]=c[i]+max(dp[i][0], dp[i][1]);
-
+	int n, w;
+	scanf("%d %d", &n, &w);
+	vector<int> weight, value;
+	int wi, vi;
+	for(int i=1;i<=n;i++){
+		scanf("%d %d", &wi, &vi);
+		weight.pb(wi);
+		value.pb(vi);
 	}
-	cout<<max(dp[n][0],max(dp[n][1],dp[n][2]));
+    vector<int> dp(w+1, 0);// dp[i] represents the maximum value for i weight
+	dp[0] = 0;
+	loop(i, 1, w){
+		loop(j, 0, n-1){
+			if(weight[j] <= i-dp[i])
+				dp[i] += max(dp[i], value[j]);
+		}
+	}
+	cout<<dp[w];
 	return 0;
 }

@@ -1,1 +1,1 @@
-;
+cout << startIndex+1 << " "<<startIndex+count-1;
